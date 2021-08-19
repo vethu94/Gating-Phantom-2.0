@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <title>{{ title }}</title>
+    <script>
+        function config() {
+            let cycleTime = document.getElementById("cycleTime").value
+            let amp = document.getElementById("amp").value
+            console.log("config: cycleTime = " + cycleTime + " amp = " + amp);
+            window.location.href="/config/" + cycleTime + "/" + amp;
+        }
+    </script>
+</head>
+<body>
+    <div class="box-4">
+        <h1>GATING SOFTWARE {{ time }} </h1>
+    </div>
+   
+    <div class="box-3">
+        <form>
+            <label for="cycleTime">CYCLE TIME [s]:</label>
+            <input type="number" id="cycleTime" name="cycleTime" min="0.5" max="120" step="0.5" value="5" ><br>
+            <label for="amp">AMPLITUDE [%]:</label>
+            <input type="number" id="amp" name="amp" min="0" max="100" step="1" value="50" ><br>
+            <input type="button" value="SUBMIT" onclick="config()">
+            <input type="button" value="STOP">
+        </form>
+        
+    </div>
+    <div class="box-2">
+        <p>PROGRAM {{ programm }}</p>
+    </div>
+   
+    <div class="box-1">
+        <div class="btn btn-one" onclick="window.location.href='/action/one'">             
+            <span> ONE</span>
+        </div>
+    </div>
+
+    <div class="box-1">
+        <div class="btn btn-two" onclick="window.location.href='/action/two'">
+            <span>TWO</span>
+        </div>
+    </div>
+
+    <div class="box-1">
+        <div class="btn btn-three" onclick="window.location.href='/action/three'">
+            <span>THREE</span>
+        </div>
+    </div>
+
+    <div class="box-1">
+        <div class="btn btn-four" onclick="window.location.href='/action/four'">
+            <span>FOUR</span>
+        </div>
+    </div>
+    
+</body>
+</html>
