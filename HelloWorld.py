@@ -1,5 +1,5 @@
 from flask import Flask, render_template
-import datetime,serial
+import datetime
 import serial
 import time
 import math
