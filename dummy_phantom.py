@@ -7,8 +7,8 @@ class DummyPhantom():
     def write(self, data):
         print(data)
 
-    def reset_input_buffer(self):
+    def flushInput(self):
         print("resetting input buffer")
 
-    def reset_output_buffer(self):
+    def flashOutput(self):
         print("resetting output buffer")
